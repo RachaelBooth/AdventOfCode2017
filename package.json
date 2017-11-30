@@ -6,14 +6,17 @@
   "scripts": {
     "build": "tsc",
     "solve": "tsc && node build/solve.js",
+    "setup": "node build/setup.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Rachael Booth",
   "license": "MIT",
   "dependencies": {
-    "commander": "^2.11.0"
+    "commander": "^2.11.0",
+    "lodash": "^4.17.4"
   },
   "devDependencies": {
+    "@types/node": "^8.0.53",
     "typescript": "^2.6.1"
   }
 }

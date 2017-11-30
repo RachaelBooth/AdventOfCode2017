@@ -9,3 +9,9 @@ For my own benefit:
 Run with:
 
 ```npm run solve -- -d <day> -p <part>```
+
+Add files for new day with:
+
+```npm run setup -- -d <day>```
+
+Add ```-2``` to the above to copy file for part 2.
