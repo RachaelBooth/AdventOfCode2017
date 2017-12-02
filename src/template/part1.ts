@@ -1,4 +1,5 @@
 import { readWholeInput, readInputLines } from '../utils/parseInput';
+import * as _ from 'lodash';
 
 const day = 0;
 
