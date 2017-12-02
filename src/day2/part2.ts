@@ -1,15 +1,15 @@
-import { readWholeInput, readInputLines } from '../utils/parseInput';
+import InputParser from '../utils/inputParser';
 import * as _ from 'lodash';
 
 const day = 2;
+const inputParser = new InputParser(day);
 
 export function solve(): string {
-    const input = readInputLines(day);
+    const input = inputParser.readLinesAsNumberArrays();
     return _.sumBy(input, line => getRowDivisionValue(line));
 }
 
-function getRowDivisionValue(inputLine: string): number {
-    const row = getNumbers(inputLine);
+function getRowDivisionValue(row: number[]): number {
     let i = 0;
     while (i < row.length - 1) {
         let j = i + 1;
@@ -24,9 +24,4 @@ function getRowDivisionValue(inputLine: string): number {
         }
         i++;
     }
-}
-
-function getNumbers(inputLine: string): number[] {
-    const parts = inputLine.split(/\s+/);
-    return _.map(parts, part => _.parseInt(part));
 }
