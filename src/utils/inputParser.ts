@@ -26,7 +26,7 @@ export default class InputParser {
 
     public readInputLines(): string[] {
         const contents = this.readWholeInput();
-        return contents.split('\r\n');
+        return contents.split(/\r?\n/);
     }
 
     public readWholeInput(): string {
