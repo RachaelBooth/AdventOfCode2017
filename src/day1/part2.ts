@@ -4,7 +4,7 @@ const day = 1;
 const inputParser = new InputParser(day);
 
 export function solve(): string {
-    const input = inputParser.readWholeInputAsNumberArray();
+    const input = inputParser.readWholeInputAsNumberArrayOfChars();
     return findSum(input).toString();
 }
 
