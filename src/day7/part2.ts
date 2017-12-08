@@ -12,15 +12,12 @@ export function solve(): string {
 
 function findCorrectWeightForMisbalanced(programmes: programme[]): number {
     const misweighted = findMisweighted(programmes);
-    console.log(misweighted);
     const topUnbalanced = _.find(programmes, p => p.supporting.includes(misweighted.name));
-    console.log(topUnbalanced);
     const supportedProgrammes = _.filter(programmes, programme => _.includes(topUnbalanced.supporting, programme.name));
-    console.log(supportedProgrammes);
     console.log(_.map(supportedProgrammes, p => p.totalWeight));
     console.log(_.map(supportedProgrammes, p => p.weight));
     const values = _.countBy(supportedProgrammes, s => s.totalWeight);
-    console.log(values);
+    // Just do this by eye from above - maybe code it up later
     return 0;
 }
 
