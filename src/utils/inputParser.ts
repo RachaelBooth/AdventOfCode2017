@@ -20,6 +20,10 @@ export default class InputParser {
         return _.map(this.readWholeInput().split(/\s+/), part => _.parseInt(part));
     }
 
+    public readWholeInputAsCommaSeperatedNumberArray(): number[] {
+        return _.map(this.readWholeInput().split(","), part => _.parseInt(part));
+    }
+
     public readLinesAsNumberArrays(): number[][] {
         return _.map(this.readLinesAsWordArrays(), row => _.map(row, part => _.parseInt(part)));
     }
