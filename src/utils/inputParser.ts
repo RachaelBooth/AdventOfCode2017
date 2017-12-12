@@ -12,6 +12,10 @@ export default class InputParser {
         return this.readWholeInput().split("");
     }
 
+    public readWholeInputAsCommaSeperatedWordArray(): string[] {
+        return this.readWholeInput().split(/[\s,]+/);
+    }
+
     public readWholeInputAsNumberArrayOfChars(): number[] {
         return _.map(this.readWholeInputAsCharacterArray(), n => _.parseInt(n));
     }
