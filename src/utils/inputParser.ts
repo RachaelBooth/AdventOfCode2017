@@ -36,6 +36,10 @@ export default class InputParser {
         return _.map(this.readInputLines(), line => line.split(/\s+/));
     }
 
+    public readLinesAsCharArrays(): string[][] {
+        return _.map(this.readInputLines(), line => line.split(''));
+    }
+
     public readInputLines(): string[] {
         const contents = this.readWholeInput();
         return contents.split(/\r?\n/);
